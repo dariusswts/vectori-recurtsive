@@ -19,9 +19,21 @@ void afisareVector(int v[],int dim){
     }
 }
 
+void citire_rec(int v[], int dim,int i,ifstream &cit){
+    if(i==dim){
+        return;
+    }
+    cit>>v[i];
+    citire_rec(v,dim,i+1,cit);
+}
 
-
-
+void afisareREC(int v[],int dim,int i){
+    if(i>=dim){
+        return;
+    }
+    cout<<v[i]<<" ";
+    afisareREC(v,dim,i+1);
+}
 
 
 
